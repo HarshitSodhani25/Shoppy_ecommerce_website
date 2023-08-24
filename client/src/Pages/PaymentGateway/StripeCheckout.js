@@ -22,7 +22,7 @@ export default function StripeCheckout() {
       fetch("/create-payment-intent", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ totalAmount: currentOrder.totalSum }),
+        body: JSON.stringify({ totalAmount: currentOrder.totalSum, orderId: currentOrder.id}),
         metadata: {
           order_id: currentOrder.id 
           //this info will go to stripe => and then to our webhook

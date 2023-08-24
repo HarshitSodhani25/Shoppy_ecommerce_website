@@ -32,10 +32,10 @@ const router = createBrowserRouter([
     {path: "/forgot-password", element: <ForgotPasswordPage/>},
     {path: "/signup", element: <Signup/>},
     {path: "/sign-out", element: <Protected><Logout/></Protected>},
-    {path: "/cart", element: <Protected><Cart/></Protected>},
+    {path: "/my-cart", element: <Protected><Cart/></Protected>},
     {path: "/checkout", element: <Protected><Checkout/></Protected>},
     {path: "/product-detail/:id", element: <Protected><ProductDetail/></Protected>},
-    {path: "/order/:id", element: <Protected><OrderSuccess/></Protected>},
+    {path: "/my-order/:id", element: <Protected><OrderSuccess/></Protected>},
     {path: "/user", element: <Protected><UserProfilePage/></Protected>},
     {path: "/user-order", element: <Protected><UserOrderPage/></Protected>},
     {path: "/stripe-checkout", element: <Protected><StripeCheckout/></Protected>},
@@ -48,9 +48,6 @@ const router = createBrowserRouter([
 
     {path: "/*", element: <Protected><PageNotFound/></Protected>},
 ])
-
-
-
 
 const App = () => {
   const dispatch = useDispatch();

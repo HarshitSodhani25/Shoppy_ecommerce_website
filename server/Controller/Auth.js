@@ -1,6 +1,6 @@
 import User from "../model/User.js";
 import crypto from "crypto"
-import {sanitizeUser} from "../Services/common.js"
+import {sanitizeUser} from "../Services/Common.js"
 import jwt from "jsonwebtoken"
 import dotenv from "dotenv";
 dotenv.config();
